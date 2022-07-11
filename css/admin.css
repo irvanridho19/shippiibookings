@@ -59,9 +59,11 @@ body {
   width: 96px;
 }
 
-.active {
+.active-shippiibookings {
   background-color: #2BB673 !important;
   border-color: #2BB673 !important;
+  color: #fbfbfb !important;
+  font-weight: 800 !important;
 }
 
 .logo-merchant {

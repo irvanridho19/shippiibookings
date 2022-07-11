@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Shippii Bookings | Active Deliveries</title>
+    <title>Shippii Bookings | Calculator</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
     <!-- Google Fonts Poppins -->
@@ -159,152 +159,92 @@
     <!--Main layout-->
     <main style="margin-top: 58px">
         <div class="container pt-4">
-            <h3>Active Deliveries</h3>
+            <h3>Calculator</h3>
 
-            <section class="mt-4 mb-4">
-                <div class="d-flex d-inline-block">
-                    <div class="btn-group shadow-0">
-                        <button type="button" class="btn btn-outline-primary dropdown-toggle" data-mdb-toggle="dropdown"
-                            aria-expanded="false">
-                            Filter by:
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </div>
-                    <div class="mx-2"></div>
-                    <form class="d-flex input-group w-auto">
-                        <input type="search" class="form-control" placeholder="Searching for.." aria-label="Search" />
-                        <button class="btn btn-outline-primary" type="button" data-mdb-ripple-color="dark">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </form>
-                </div>
-            </section>
-
-            <section class="mt-4 mb-4">
-                <div class="row">
-                    <div class="col-12 col-md-3">
-                        <label class="form-label" for="from">From</label>
-                        <input type="text" id="from" name="from" class="form-control">
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <label class="form-label" for="to">To</label>
-                        <input type="text" id="to" name="to" class="form-control">
-                    </div>
-                </div>
-            </section>
-
-            <section class="mb-4 mt-4">
-                <div class="d-flex d-inline">
-                    <button class="btn btn-warning" id="downloadTable">Download as CSV</button>
-                    <div class="mx-2"></div>
-                    <a href="create-new-delivery.html" class="btn btn-success">Create New Delivery</a>
-                </div>
-            </section>
-
-            <!-- Table-->
+            <!-- Form -->
             <section class="mt-4">
-                <div class="table-responsive">
-                    <table class="table" id="myTable">
-                        <thead>
-                            <tr class="table-warning">
-                                <th scope="col">ORDER ID/TRACKING #</th>
-                                <th scope="col">NAME & SURNAME</th>
-                                <th scope="col">CONTACT NUMBER</th>
-                                <th scope="col">EMAIL ADDRESS</th>
-                                <th scope="col">DELIVERY ADDRESS</th>
-                                <th scope="col">STATUS</th>
-                                <th scope="col">DATE CREATED</th>
-                                <th scope="col">COMMENT</th>
-                                <th scope="col">MESSAGE FROM Shippii</th>
-                                <th scope="col">WAYBILL</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">SHI978578987</th>
-                                <td>Sibusiso Khumalo</td>
-                                <td>123345678</td>
-                                <td>sib@gg.com</td>
-                                <td>50 Manmar Properties</td>
-                                <td>Dispatched</td>
-                                <td>28/3/2022</td>
-                                <td>
-                                    <div class="form-outline">
-                                        <textarea class="form-control" id="textAreaExample" rows="4"
-                                            placeholder="Write your comment"></textarea>
-                                    </div>
-                                    <button class="btn btn-warning mt-2">Send</button>
-                                </td>
-                                <td>WRONG CONTACT NUMBER</td>
-                                <td>
-                                    <button type="button" class="btn btn-success mb-2">VIEW</button>
-                                    <button type="button" class="btn btn-success mb-2">SCAN</button>
-                                    <button type="button" class="btn btn-success mb-2">PRINT</button>
-                                    <button type="button" class="btn btn-success mb-2">DOWNLOAD</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <form>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="form-outline">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Choose country:</option>
+                                    <option value="1">Namibia</option>
+                                    <option value="2">Botswana</option>
+                                    <option value="3">Estiwana</option>
+                                    <option value="3">South Africa</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-outline">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Choose city:</option>
+                                    <option value="1">City</option>
+                                    <option value="2">City</option>
+                                    <option value="3">City</option>
+                                    <option value="4">City</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="form-outline">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Parcel type</option>
+                                    <option value="1">Courier Bag</option>
+                                    <option value="2">Custom</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-outline">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Number of deliveries</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h5>Fill this information if you choose Custom Parcel.</h5>
+                        </div>
+                        <div class="col-12 col-md-3 mb-4">
+                            <label for="weight" class="form-label">Weight</label>
+                            <input type="number" class="form-control" id="weight" placeholder="Kg">
+                        </div>
+                        <div class="col-12 col-md-3 mb-4">
+                            <label for="length" class="form-label">Length</label>
+                            <input type="number" class="form-control" id="length" placeholder="Cm">
+                        </div>
+                        <div class="col-12 col-md-3 mb-4">
+                            <label for="height" class="form-label">Height</label>
+                            <input type="number" class="form-control" id="height" placeholder="Cm">
+                        </div>
+                        <div class="col-12 col-md-3 mb-4">
+                            <label for="width" class="form-label">Width</label>
+                            <input type="number" class="form-control" id="width" placeholder="Cm">
+                        </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-success btn-block mb-4">Get An Estimate</button>
+                </form>
             </section>
         </div>
     </main>
     <!--Main layout-->
-
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-    <script>
-        $(function () {
-            var dateFormat = "mm/dd/yy",
-                from = $("#from")
-                .datepicker({
-                    defaultDate: "+1w",
-                    changeMonth: true,
-                    numberOfMonths: 3
-                })
-                .on("change", function () {
-                    to.datepicker("option", "minDate", getDate(this));
-                }),
-                to = $("#to").datepicker({
-                    defaultDate: "+1w",
-                    changeMonth: true,
-                    numberOfMonths: 3
-                })
-                .on("change", function () {
-                    from.datepicker("option", "maxDate", getDate(this));
-                });
-
-            function getDate(element) {
-                var date;
-                try {
-                    date = $.datepicker.parseDate(dateFormat, element.value);
-                } catch (error) {
-                    date = null;
-                }
-
-                return date;
-            }
-        });
-    </script>
-
-    <!-- CSV -->
-    <script src="js/table-to-csv.min.js"></script>
-    <script>
-        const tableToCSV = new TableToCSV("#myTable", {
-            filename: "shippii-bookings.csv",
-        });
-
-        document.querySelector("#downloadTable").addEventListener("click", (e) => {
-            tableToCSV.download();
-        });
-    </script>
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
-    <script src="js/datepicker.js"></script>
     <!-- Custom scripts -->
     <script type="text/javascript" src="js/admin.js"></script>
 

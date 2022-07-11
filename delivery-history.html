@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Shippii Bookings | Active Deliveries</title>
+    <title>Shippii Bookings | Delivery History</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
     <!-- Google Fonts Poppins -->
@@ -159,7 +159,7 @@
     <!--Main layout-->
     <main style="margin-top: 58px">
         <div class="container pt-4">
-            <h3>Active Deliveries</h3>
+            <h3>Delivery History</h3>
 
             <section class="mt-4 mb-4">
                 <div class="d-flex d-inline-block">
@@ -197,14 +197,6 @@
                 </div>
             </section>
 
-            <section class="mb-4 mt-4">
-                <div class="d-flex d-inline">
-                    <button class="btn btn-warning" id="downloadTable">Download as CSV</button>
-                    <div class="mx-2"></div>
-                    <a href="create-new-delivery.html" class="btn btn-success">Create New Delivery</a>
-                </div>
-            </section>
-
             <!-- Table-->
             <section class="mt-4">
                 <div class="table-responsive">
@@ -218,9 +210,9 @@
                                 <th scope="col">DELIVERY ADDRESS</th>
                                 <th scope="col">STATUS</th>
                                 <th scope="col">DATE CREATED</th>
-                                <th scope="col">COMMENT</th>
+                                <th scope="col">DELIVERY DATE</th>
                                 <th scope="col">MESSAGE FROM Shippii</th>
-                                <th scope="col">WAYBILL</th>
+                                <th scope="col">RETURNS</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -230,21 +222,14 @@
                                 <td>123345678</td>
                                 <td>sib@gg.com</td>
                                 <td>50 Manmar Properties</td>
-                                <td>Dispatched</td>
-                                <td>28/3/2022</td>
+                                <td>Delivered</td>
+                                <td>28/03/2022</td>
                                 <td>
-                                    <div class="form-outline">
-                                        <textarea class="form-control" id="textAreaExample" rows="4"
-                                            placeholder="Write your comment"></textarea>
-                                    </div>
-                                    <button class="btn btn-warning mt-2">Send</button>
+                                    30/03/2022
                                 </td>
-                                <td>WRONG CONTACT NUMBER</td>
+                                <td>-</td>
                                 <td>
-                                    <button type="button" class="btn btn-success mb-2">VIEW</button>
-                                    <button type="button" class="btn btn-success mb-2">SCAN</button>
-                                    <button type="button" class="btn btn-success mb-2">PRINT</button>
-                                    <button type="button" class="btn btn-success mb-2">DOWNLOAD</button>
+                                    <a href="return.html" type="button" class="btn btn-success mb-2">RETURN</a>
                                 </td>
                             </tr>
                         </tbody>
