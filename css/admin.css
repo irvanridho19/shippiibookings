@@ -1,6 +1,6 @@
 body {
   background-color: #fbfbfb;
-  font-family: 'Poppins', sans-serif;;
+  font-family: "Poppins", sans-serif;
 }
 @media (min-width: 991.98px) {
   main {
@@ -40,19 +40,19 @@ body {
 }
 
 .orange {
-  background-color: #F7941C !important;
+  background-color: #f7941c !important;
 }
 
 .green {
-  background-color: #2BB673 !important;
+  background-color: #2bb673 !important;
 }
 
 .color-orange {
-  color: #F7941C !important;
+  color: #f7941c !important;
 }
 
 .color-green {
-  color: #2BB673 !important;
+  color: #2bb673 !important;
 }
 
 .logo {
@@ -60,12 +60,54 @@ body {
 }
 
 .active-shippiibookings {
-  background-color: #2BB673 !important;
-  border-color: #2BB673 !important;
+  background-color: #2bb673 !important;
+  border-color: #2bb673 !important;
   color: #fbfbfb !important;
   font-weight: 800 !important;
 }
 
 .logo-merchant {
   width: 120px !important;
+}
+
+.imagePreview {
+  width: 100%;
+  height: 150px;
+  background-position: center center;
+  background: url(https://via.placeholder.com/150);
+  background-color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
+  box-shadow: 0px -3px 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+.imgUp {
+  margin-bottom: 15px;
+}
+
+.del {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.imgAdd {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color:#2bb673;
+  color: #fff;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  line-height: 30px;
+  margin-top: 0px;
+  cursor: pointer;
+  font-size: 15px;
 }
