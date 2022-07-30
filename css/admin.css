@@ -8,6 +8,11 @@ body {
   }
 }
 
+:root {
+  --orange: #F7941C;
+  --green: #2BB673;
+}
+
 /* Sidebar */
 .sidebar {
   position: fixed;

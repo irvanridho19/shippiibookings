@@ -162,7 +162,7 @@
 
             <!-- Form Delivery -->
             <section class="mt-4">
-                <h5 class="title-delivery mb-4">
+                <h5 class="title-delivery mb-4 color-orange">
                     Collection Address
                 </h5>
                 <form action="submit" id="collection" method="get">
@@ -236,7 +236,7 @@
             </section>
 
             <section class="mt-2">
-                <h5 class="title-delivery mb-4">
+                <h5 class="title-delivery mb-4 color-orange">
                     Parcel Dimensions
                 </h5>
                 <form action="submit" id="dimensions" method="get">
@@ -254,22 +254,22 @@
                     <div class="row mb-4 ">
                         <div class="col-12 col-md-3 mb-4">
                             <label for="weight" class="form-label">Weight</label>
-                            <input type="number" class="form-control" id="weight" placeholder="Kg">
+                            <input type="number" class="form-control" id="weight" placeholder="Kg" name="quantity" min="1">
                         </div>
                         <div class="col-12 col-md-3 mb-4">
                             <label for="length" class="form-label">Length</label>
-                            <input type="number" class="form-control" id="length" placeholder="Cm">
+                            <input type="number" class="form-control" id="length" placeholder="Cm" name="quantity" min="1">
                         </div>
                         <div class="col-12 col-md-3 mb-4">
                             <label for="height" class="form-label">Height</label>
-                            <input type="number" class="form-control" id="height" placeholder="Cm">
+                            <input type="number" class="form-control" id="height" placeholder="Cm" name="quantity" min="1">
                         </div>
                         <div class="col-12 col-md-3 mb-4">
                             <label for="width" class="form-label">Width</label>
-                            <input type="number" class="form-control" id="width" placeholder="Cm">
+                            <input type="number" class="form-control" id="width" placeholder="Cm" name="quantity" min="1">
                         </div>
                         <div class="float">
-                            <a class="btn btn-primary" style="background-color: #ffac44;" href="#!" role="button">
+                            <a class="btn btn-primary green" href="#!" role="button">
                                 <i class="fas fa-plus"></i>
                                 Add new collection
                             </a>
@@ -282,7 +282,7 @@
 
             <section class="mt-4">
 
-                <h5 class="title-delivery mb-4">
+                <h5 class="title-delivery mb-4 color-orange">
                     Delivery Address
                 </h5>
                 <form action="submit" id="delivery" method="get">
@@ -403,6 +403,13 @@
     </script>
     <!-- Custom scripts -->
     <script type="text/javascript" src="js/admin.js"></script>
+    <script>
+        let qty = document.querySelector("input[name='quantity']");
+        qty.addEventListener("change", function (event) {
+            if (this.value < 1) this.value = 1; // minimum is 1
+            else this.value = Math.floor(this.value); // only integers allowed
+        })
+    </script>
 
 </body>
 

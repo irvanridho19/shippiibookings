@@ -31,8 +31,9 @@
                     <a href="admin.html" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
                         <i class="fas fa-chart-line fa-fw me-3"></i><span>Dashboard</span>
                     </a>
-                    <a class="list-group-item list-group-item-action py-2 ripple active-shippiibookings" data-mdb-toggle="collapse"
-                        href="#deliveries" role="button" aria-expanded="false" aria-controls="deliveries">
+                    <a class="list-group-item list-group-item-action py-2 ripple active-shippiibookings"
+                        data-mdb-toggle="collapse" href="#deliveries" role="button" aria-expanded="false"
+                        aria-controls="deliveries">
                         <i class="fas fa-truck-pickup fa-fw me-3"></i><span>My Deliveries</span>
                     </a>
                     <div class="collapse mt-3" id="deliveries">
@@ -161,74 +162,21 @@
 
             <!-- Form Delivery -->
             <section class="mt-4">
-
-                <h5 class="title-delivery mb-4">
+                <h5 class="title-delivery mb-4 color-orange">
                     Collection Address
                 </h5>
-                <form action="submit" id="delivery" method="get">
-                    <div class="row">
+                <form action="submit" id="collection" method="get">
+                    <div class="row mb-4">
                         <div class="col-12 col-md-6">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Choose country:</option>
-                                <option value="1">Namibia</option>
-                                <option value="2">Botswana</option>
-                                <option value="3">Estiwana</option>
-                                <option value="3">South Africa</option>
+                            <select class="form-select" aria-label="Default select example" form="collection">
+                                <option selected>Autofill from address book</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="3">4</option>
                             </select>
                         </div>
                     </div>
-                    <div class="row mt-4">
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="surname" class="form-label">Recipient Name Surname</label>
-                            <input type="text" class="form-control" id="surname" placeholder="Recipient" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="contact" class="form-label">Recipient Contact Number</label>
-                            <input type="text" class="form-control" id="contact" placeholder="Contact Number" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="email" class="form-label">Recipient Contact Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="street" class="form-label">Street Address</label>
-                            <input type="email" class="form-control" id="street" placeholder="Street Address" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="province" class="form-label">Province/State/Region</label>
-                            <input type="email" class="form-control" id="province" placeholder="Province" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="city" class="form-label">City</label>
-                            <input type="email" class="form-control" id="city" placeholder="City" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="suburb" class="form-label">Suburb/Town</label>
-                            <input type="email" class="form-control" id="suburb" placeholder="Suburb" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="store" class="form-label">Store/Building Name</label>
-                            <input type="email" class="form-control" id="store" placeholder="Store" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="house-number" class="form-label">Store/Unit/Office/House Number</label>
-                            <input type="email" class="form-control" id="house-number" placeholder="House Number"
-                                required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="postal-code" class="form-label">Postal Code</label>
-                            <input type="email" class="form-control" id="postal-code" placeholder="Postal Code"
-                                required>
-                        </div>
-                    </div>
-                </form>
-            </section>
-
-            <section class="mt-4">
-                <h5 class="title-delivery mb-4">
-                    Delivery Address
-                </h5>
-                <form action="submit" id="collection" method="get">
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <select class="form-select" aria-label="Default select example">
@@ -287,43 +235,147 @@
                 </form>
             </section>
 
-            <section class="mt-4">
-                <h5 class="title-delivery mb-4">
-                    Dimensions
+            <section class="mt-2">
+                <h5 class="title-delivery mb-4 color-orange">
+                    Parcel Dimensions
                 </h5>
                 <form action="submit" id="dimensions" method="get">
-                    <div class="row">
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-3">
+                            <div class="form-outline">
+                                <select class="form-select" aria-label="Parcel type">
+                                    <option selected>Parcel type</option>
+                                    <option value="1">Courier Bag</option>
+                                    <option value="2">Custom</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4 ">
                         <div class="col-12 col-md-3 mb-4">
                             <label for="weight" class="form-label">Weight</label>
-                            <input type="number" class="form-control" id="weight" placeholder="Kg">
+                            <input type="number" class="form-control" id="weight" placeholder="Kg" name="quantity" min="1">
                         </div>
                         <div class="col-12 col-md-3 mb-4">
                             <label for="length" class="form-label">Length</label>
-                            <input type="number" class="form-control" id="length" placeholder="Cm">
+                            <input type="number" class="form-control" id="length" placeholder="Cm" name="quantity" min="1">
                         </div>
                         <div class="col-12 col-md-3 mb-4">
                             <label for="height" class="form-label">Height</label>
-                            <input type="number" class="form-control" id="height" placeholder="Cm">
+                            <input type="number" class="form-control" id="height" placeholder="Cm" name="quantity" min="1">
                         </div>
                         <div class="col-12 col-md-3 mb-4">
                             <label for="width" class="form-label">Width</label>
-                            <input type="number" class="form-control" id="width" placeholder="Cm">
+                            <input type="number" class="form-control" id="width" placeholder="Cm" name="quantity" min="1">
                         </div>
                         <div class="float">
-                            <a class="btn btn-primary" style="background-color: #ffac44;" href="#!" role="button">
+                            <a class="btn btn-primary green" href="#!" role="button">
                                 <i class="fas fa-plus"></i>
                                 Add new collection
                             </a>
                         </div>
                     </div>
                 </form>
+            </section>
 
-                <div class="row mt-5 mb-5">
-                    <div class="col-12 col-md-6">
-                        <button type="submit" class="btn btn-success btn-block">Confirm Return</button>
+            <hr />
+
+            <section class="mt-4">
+
+                <h5 class="title-delivery mb-4 color-orange">
+                    Delivery Address
+                </h5>
+                <form action="submit" id="delivery" method="get">
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-6">
+                            <select class="form-select" aria-label="Default select example" form="delivery">
+                                <option selected>Autofill from address book</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="3">4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Choose country:</option>
+                                <option value="1">Namibia</option>
+                                <option value="2">Botswana</option>
+                                <option value="3">Estiwana</option>
+                                <option value="3">South Africa</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="surname" class="form-label">Recipient Name Surname</label>
+                            <input type="text" class="form-control" id="surname" placeholder="Recipient" required>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="contact" class="form-label">Recipient Contact Number</label>
+                            <input type="text" class="form-control" id="contact" placeholder="Contact Number" required>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="email" class="form-label">Recipient Contact Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="street" class="form-label">Street Address</label>
+                            <input type="email" class="form-control" id="street" placeholder="Street Address" required>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="province" class="form-label">Province/State/Region</label>
+                            <input type="email" class="form-control" id="province" placeholder="Province" required>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="city" class="form-label">City</label>
+                            <input type="email" class="form-control" id="city" placeholder="City" required>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="suburb" class="form-label">Suburb/Town</label>
+                            <input type="email" class="form-control" id="suburb" placeholder="Suburb" required>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="store" class="form-label">Store/Building Name</label>
+                            <input type="email" class="form-control" id="store" placeholder="Store" required>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="house-number" class="form-label">Store/Unit/Office/House Number</label>
+                            <input type="email" class="form-control" id="house-number" placeholder="House Number"
+                                required>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="postal-code" class="form-label">Postal Code</label>
+                            <input type="email" class="form-control" id="postal-code" placeholder="Postal Code"
+                                required>
+                        </div>
+                        <div class="col-12 col-md-12 mb-5">
+                            <label for="comment" class="form-label">Comment</label>
+                            <textarea class="form-control" id="comment" rows="3"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+
+            <hr />
+            <div class="row mb-4">
+                <div class="col-12 col-md-6">
+                    <div class="form-outline">
+                        <label for="length" class="form-label">Delivery cost</label>
+                        <input class="form-control" id="deliveryCost" type="text" value="R 300"
+                            aria-label="disabled input example" disabled />
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <div class="row mt-5 mb-5">
+                <div class="col-12 col-md-12">
+                    <button type="submit" class="btn btn-success btn-block">Confirm Delivery</button>
+                </div>
+            </div>
         </div>
     </main>
     <!--Main layout-->
@@ -350,6 +402,13 @@
     </script>
     <!-- Custom scripts -->
     <script type="text/javascript" src="js/admin.js"></script>
+    <script>
+        let qty = document.querySelector("input[name='quantity']");
+        qty.addEventListener("change", function (event) {
+            if (this.value < 1) this.value = 1; // minimum is 1
+            else this.value = Math.floor(this.value); // only integers allowed
+        })
+    </script>
 
 </body>
 

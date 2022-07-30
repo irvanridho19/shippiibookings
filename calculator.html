@@ -190,7 +190,7 @@
                     </div>
 
                     <div class="row mb-4">
-                        <div class="col">
+                        <div class="col col-md-6">
                             <div class="form-outline">
                                 <select class="form-select" aria-label="Default select example">
                                     <option selected>Parcel type</option>
@@ -199,40 +199,27 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="form-outline">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Number of deliveries</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                </select>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="row mb-4">
-                        <div class="col-12">
+                        <div class="col-12 color-orange">
                             <h5>Fill this information if you choose Custom Parcel.</h5>
                         </div>
                         <div class="col-12 col-md-3 mb-4">
                             <label for="weight" class="form-label">Weight</label>
-                            <input type="number" class="form-control" id="weight" placeholder="Kg">
+                            <input type="number" class="form-control" id="weight" placeholder="Kg" name="quantity" min="1">
                         </div>
                         <div class="col-12 col-md-3 mb-4">
                             <label for="length" class="form-label">Length</label>
-                            <input type="number" class="form-control" id="length" placeholder="Cm">
+                            <input type="number" class="form-control" id="length" placeholder="Cm" name="quantity" min="1">
                         </div>
                         <div class="col-12 col-md-3 mb-4">
                             <label for="height" class="form-label">Height</label>
-                            <input type="number" class="form-control" id="height" placeholder="Cm">
+                            <input type="number" class="form-control" id="height" placeholder="Cm" name="quantity" min="1">
                         </div>
                         <div class="col-12 col-md-3 mb-4">
                             <label for="width" class="form-label">Width</label>
-                            <input type="number" class="form-control" id="width" placeholder="Cm">
+                            <input type="number" class="form-control" id="width" placeholder="Cm" name="quantity" min="1">
                         </div>
                     </div>
 
@@ -247,6 +234,13 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
     <script type="text/javascript" src="js/admin.js"></script>
+    <script>
+        let qty = document.querySelector("input[name='quantity']");
+        qty.addEventListener("change", function (event) {
+            if (this.value < 1) this.value = 1; // minimum is 1
+            else this.value = Math.floor(this.value); // only integers allowed
+        })
+    </script>
 
 </body>
 
